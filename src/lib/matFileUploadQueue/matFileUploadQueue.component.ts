@@ -1,9 +1,15 @@
-import { Component, OnInit, OnDestroy, QueryList, ViewChildren, Input, ContentChildren, forwardRef } from '@angular/core';
-import { MatFileUpload } from './../matFileUpload/matFileUpload.component';
-import { Subscription } from 'rxjs/Subscription';
-import { Observable } from 'rxjs/Observable';
-import { merge } from 'rxjs/observable/merge';
-import { startWith } from 'rxjs/operators/startWith';
+import {
+    Component,
+    OnDestroy,
+    QueryList,
+    Input,
+    ContentChildren,
+    forwardRef,
+    AfterViewInit
+} from '@angular/core';
+import { MatFileUpload } from '../matFileUpload/matFileUpload.component';
+import { merge, Subscription } from 'rxjs';
+import { startWith } from 'rxjs/operators';
 import { HttpHeaders, HttpParams } from '@angular/common/http';
 
 
@@ -15,7 +21,7 @@ import { HttpHeaders, HttpParams } from '@angular/common/http';
     templateUrl: `matFileUploadQueue.component.html`,
     exportAs: 'matFileUploadQueue',
   })
-  export class MatFileUploadQueue implements OnDestroy {
+  export class MatFileUploadQueue implements OnDestroy, AfterViewInit {
 
     @ContentChildren(forwardRef(() => MatFileUpload)) fileUploads: QueryList<MatFileUpload>;
 

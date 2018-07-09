@@ -1,5 +1,5 @@
 import { Input, Component } from '@angular/core';
-import { HttpClient, HttpEventType, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpHeaders, HttpParams } from '@angular/common/http';
 
 
 import '../assets/css/styles.css';

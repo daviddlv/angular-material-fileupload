@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, Optional, Inject, forwardRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, Output, Inject, forwardRef } from '@angular/core';
 import { HttpClient, HttpEventType, HttpHeaders, HttpParams } from '@angular/common/http';
 import { MatFileUploadQueue } from '../matFileUploadQueue/matFileUploadQueue.component';
 

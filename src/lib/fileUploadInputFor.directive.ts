@@ -1,12 +1,9 @@
 import {
-    Component,
     Directive,
     ElementRef,
     EventEmitter,
     HostListener,
     Input,
-    OnDestroy,
-    OnInit,
     Output,
 } from '@angular/core';
 
@@ -40,7 +37,7 @@ import {
       let files = this.element.nativeElement.files;
       this.onFileSelected.emit(files);
 
-      for (var i = 0; i < files.length; i++) {
+      for (let i = 0; i < files.length; i++) {
         this._queue.add(files[i]);
      }
      this.element.nativeElement.value = '';
@@ -51,7 +48,7 @@ import {
       let files = event.dataTransfer.files;
       this.onFileSelected.emit(files);
 
-      for (var i = 0; i < files.length; i++) {
+      for (let i = 0; i < files.length; i++) {
         this._queue.add(files[i]);
       }
       event.preventDefault();
